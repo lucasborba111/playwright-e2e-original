@@ -23,11 +23,11 @@ test.describe('Cadastro de usuário para delivery', () => {
 
   test('Preencher formulário de cadastro', async () => {
     await cadastroPage.preencherFormulario();
-    // await cadastroPage.validarCadastro();
+    await cadastroPage.validarCadastro();
   });
 
-  //   test('Preencher formulário de cadastro com dados inválidos', async () => {
-  //     await cadastroPage.preencherFormularioInvalido();
-  //     await cadastroPage.validarCNH();
-  //   });
+  test('Preencher formulário de cadastro com dados inválidos', async () => {
+    await cadastroPage.preencherFormularioFaltandoCampos();
+    await cadastroPage.invalidarCadastro();
+  });
 });

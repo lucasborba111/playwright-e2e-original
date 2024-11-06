@@ -30,4 +30,16 @@ export default class CadastroElements extends BaseElements {
   getCampoMensagem(): Locator {
     return this.page.locator('textarea[name="mensagem"]');
   }
+
+  getMessageOK(): Locator {
+    return this.page.locator(
+      'text=Mensagem enviada com sucesso! Sua mensagem será analisada por nossa equipe e respondida com a maior brevidade possível.'
+    );
+  }
+
+  getMessageError(): Locator {
+    return this.page.locator(
+      'text=O assunto é obrigatório, verifique a digitação e tente novamente!'
+    );
+  }
 }
