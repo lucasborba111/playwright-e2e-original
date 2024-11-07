@@ -8,10 +8,10 @@ export default class HomeElements extends BaseElements {
   }
 
   getSearchField(): Locator {
-    return this.page.locator('[name="q"]').first();
+    return this.page.locator('[name="q"]').nth(0);
   }
 
   getSearchButton(): Locator {
-    return this.page.locator('a[href="#search-header"]').first();
+    return this.page.locator('a[href="#search-header"]').nth(0);
   }
 }

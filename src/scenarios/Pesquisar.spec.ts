@@ -3,7 +3,7 @@ import { join } from 'path';
 import { TheConfig } from 'sicolo';
 import HomePage from '../support/pages/HomePage';
 
-test.describe('Cadastro de usuário para delivery', () => {
+test.describe('Pesquisa de noticia na eldorado', () => {
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   let homePage: HomePage;
   let BASE_URL = TheConfig.fromFile(CONFIG)

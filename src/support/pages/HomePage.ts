@@ -13,7 +13,10 @@ export default class HomePage extends BasePage {
 
   async searchProductByName(): Promise<void> {
     await this.homeElements.getSearchButton().click();
-    await this.homeElements.getSearchField().fill('Criciúma');
-    await this.homeElements.getSearchField().press('Enter');
+    //por algum motivo demora a abrir a barra de pesquisa
+    setTimeout(() => {
+      this.homeElements.getSearchField().fill('Criciúma');
+      this.homeElements.getSearchField().press('Enter');
+    }, 50000);
   }
 }
