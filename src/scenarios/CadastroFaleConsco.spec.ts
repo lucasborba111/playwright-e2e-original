@@ -20,7 +20,7 @@ test.describe('Cadastro de usuário para delivery', () => {
     cadastroPage = new CadastroPage(page);
     await page.goto(BASE_URL);
   });
-
+ 
   test('Preencher formulário de cadastro', async () => {
     await cadastroPage.preencherFormulario();
     await cadastroPage.validarCadastro();
